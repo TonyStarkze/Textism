@@ -1,3 +1,4 @@
+import "./ensure.storage";
 import express from "express";
 import path from "path";
 import { parsePort } from "./utils";
