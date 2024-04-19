@@ -1,157 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+main img {
+  width: 250px;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 
-body{
-    height: 100vh;
-    background: var(--primary-color);
-    color: var(--secondary-color);
+.form-container {
+  margin-top: -70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+.form-container .text-box-title {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  margin-bottom: 28px;
+  font-size: 25px;
 }
 
-:root{
-    --primary-color: #fff;
-    --secondary-color: #1E1E1E; 
-    --head-color: #fff;
+.expiry-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.dark-theme{
-    --primary-color: #1E1E1E;
-    --secondary-color: #fff; 
-    --head-color: black;
+.expiry-container h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
 }
 
-.head{
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 66px;
-    border-bottom: 1.5px solid var(--secondary-color);
-    background: var(--head-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    color: var(--secondary-color);
+.code-meta {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  padding: 5px;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+  border: 5px solid #52ff00;
+  margin-bottom: 5px;
 }
 
-.logo-container{
-    height: 45px;
-    width: 45px;
+.form-container .text-box {
+  max-height: 850px;
+  min-height: 350px;
+  min-width: 750px;
+  max-width: 750px;
+  padding-top: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 5px solid #52ff00;
+  margin-bottom: 20px;
+  outline: none;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
-.logo-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.copy-btn-container {
+  display: flex;
+  justify-content: left;
+  width: 750px;
 }
 
-.site-name-container{
-    margin-left: 13px;
-}
-
-.site-name{
-    font-family: "Itim", Arial, Helvetica, sans-serif;
-    font-size: 50px;
-}
-
-.theme-container{
-    height: 35px;
-    width: 35px;
-    position: absolute;
-    right: 0;
-    margin-right: 23px;
-    margin-top: 8px;
-}
-
-.theme{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-main
-img{
-    width: 250px;
-    margin-top: 50px;
-    margin-left: 20px;
-}
-
-.form-container{
-    margin-top: -70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-container
-.text-box-title{
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
-    margin-bottom: 28px;
-    font-size: 25px;
-}
-
-.form-container
-.text-box{
-    max-height: 850px;
-    min-height: 350px;
-    min-width: 750px;
-    max-width: 750px;
-    padding-top: 18px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 15px;
-    font-weight: bold;
-    border: 5px solid #52FF00;
-    margin-bottom: 20px;
-    outline: none;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-.copy-btn-container{
-    display: flex;
-    justify-content: left;
-    width: 750px;
-    
-}
-
-.copy-btn-container
-.copy-btn{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 17px;
-    padding-right: 17px;
-    background-color: var(--primary-color);
-    border: 2px solid #52FF00;
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 25px;
-    font-family: sans-serif;
-    outline: none;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: -webkit-text-stroke-width 0.45s ease-in-out,
+.copy-btn-container .copy-btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 17px;
+  padding-right: 17px;
+  background-color: var(--primary-color);
+  border: 2px solid #52ff00;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 25px;
+  font-family: sans-serif;
+  outline: none;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: -webkit-text-stroke-width 0.45s ease-in-out,
     -webkit-text-stroke-color 0.49s ease-in-out;
 }
 
-.copy-btn-container
-.copy-btn:hover{
-    background: #52FF00;
-    color: #fff;
-    -webkit-text-stroke-width: .8px;
-    -webkit-text-stroke-color: rgb(6, 82, 126);
+.copy-btn-container .copy-btn:hover {
+  background: #52ff00;
+  color: #fff;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: rgb(6, 82, 126);
 }

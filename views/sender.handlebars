@@ -1,0 +1,43 @@
+<main>
+  {{#if code}}
+    <div class="code-container">
+      <h2>Your text is available
+        <a class="code-link" href="/receiver/{{code}}">here</a>
+        &nbsp;share code -
+        <span class="code-span">{{code}}</span>
+      </h2>
+    </div>
+  {{else}}
+    <div class="form-header">
+      <p class="text-box-title">Enter Your Text</p>
+      <img src="/images/doc-drdisrespect.gif" alt="fun image" />
+    </div>
+    {{#if error}}
+      <p>Text cannot be empty, please enter valid text</p>
+    {{/if}}
+    <form id="text-form" class="form-container" method="post" action="/sender">
+      <textarea
+        class="text-box"
+        name="text"
+        id="text-input"
+        placeholder="Start typing here.."
+      ></textarea>
+      <div class="share-button-and-code">
+        <div class="shareNcopy">
+          <input
+            class="share-button"
+            id="share-btn"
+            type="submit"
+            value="Share"
+            disabled
+          />
+          <button onclick="copyText()" class="copy-btn">COPY</button>
+        </div>
+        <p id="passcode-para" class="passcode hidden"></p>
+      </div>
+    </form>
+  {{/if}}
+
+</main>
+
+<script src="/js/sender.js"></script>

@@ -6,47 +6,22 @@ const typed = new Typed(".company-title", {
   loop: false,
 });
 
-var theme = document.getElementsByClassName("theme-container")[0];
+const codeInputEl = document.querySelector("#code-inp");
 
-var theme_icon = document.getElementsByClassName("theme")[0];
+const goButton = document.querySelector("#go-btn");
 
-if (localStorage.getItem("Mode") == "dark-theme") {
-  document.body.classList.add("dark-theme");
-  theme_icon.src = "/images/Sun.png";
-}
-
-theme.onclick = function () {
-  document.body.classList.toggle("dark-theme");
-
-  //swapping sun and moon icons
-  if (document.body.classList.contains("dark-theme")) {
-    theme_icon.src = "/images/Sun.png";
+codeInputEl.addEventListener("input", (e) => {
+  if (!e.target.value) {
+    goButton.disabled = true;
   } else {
-    theme_icon.src = "/images/Moon.png";
+    goButton.disabled = false;
   }
+});
 
-  //Preventing page from loss of theme upon page refresh
-  if (
-    (localStorage.getItem("Mode") == "light-theme") |
-    (localStorage.getItem("Mode") == null)
-  ) {
-    localStorage.setItem("Mode", "dark-theme");
-  } else {
-    localStorage.setItem("Mode", "light-theme");
+goButton.addEventListener("click", (e) => {
+  const code = codeInputEl.value;
+
+  if (code) {
+    window.location.href = `/receiver/${code}`;
   }
-};
-
-document
-  .getElementsByClassName("code")[0]
-  .addEventListener("input", function () {
-    var userInput = this.value;
-    // Check if the input is exactly four digits
-    /*if (userInput.length === 4 && !isNaN(userInput))*/
-    if (userInput.length === 4) {
-      // Wait for 4 seconds (4000 milliseconds)
-      setTimeout(function () {
-        // Open another HTML file
-        window.location.href = "/receiver";
-      }, 3000);
-    }
-  });
+});

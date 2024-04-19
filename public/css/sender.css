@@ -1,194 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.form-header,
+.code-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-body{
-    height: 100vh;
-    background: var(--primary-color);
-    color: var(--secondary-color);
+.code-link {
+  color: #3ab402;
+  text-decoration: underline;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+.code-span {
+  margin-left: 5px;
+  color: #3ab402;
 }
 
-
-:root{
-    --primary-color: #fff;
-    --secondary-color: #1E1E1E; 
-    --head-color: #fff;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.dark-theme{
-    --primary-color: #1E1E1E;
-    --secondary-color: #fff; 
-    --head-color: black;
+.form-header .text-box-title,
+.code-container h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 25px;
 }
 
-.head{
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 66px;
-    border-bottom: 1.5px solid var(--secondary-color);
-    background: var(--head-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    color: var(--secondary-color);
+.form-container .text-box {
+  max-height: 850px;
+  min-height: 350px;
+  min-width: 750px;
+  max-width: 750px;
+  padding-top: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 5px solid #52ff00;
+  margin-bottom: 20px;
+  outline: none;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
-.logo-container{
-    height: 45px;
-    width: 45px;
+.form-container .text-box::placeholder {
+  text-align: center;
+  font-size: 20px;
+  color: #52ff00;
 }
 
-.logo-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.share-button-and-code {
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
 }
 
-.site-name-container{
-    margin-left: 13px;
+.share-button-and-code .share-button {
+  padding: 15px 25px;
+  font-size: 17px;
+  font-weight: bold;
+  background: #3ab402;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out;
 }
 
-.site-name{
-    font-family: "Itim", Arial, Helvetica, sans-serif;
-    font-size: 50px;
+.share-button-and-code .share-button:hover {
+  background: #52ff00;
 }
 
-.theme-container{
-    height: 35px;
-    width: 35px;
-    position: absolute;
-    right: 0;
-    margin-right: 23px;
-    margin-top: 8px;
+.share-button-and-code .passcode {
+  display: inline-block;
+  padding-top: 16px;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: rgb(8, 115, 202);
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 25px;
+  font-family: sans-serif;
+  /* display: none; */
 }
 
-.theme{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+.passcode.hidden {
+  display: none;
 }
 
-.form-container{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.share-button-and-code .shareNcopy {
+  display: flex;
 }
 
-.form-container
-.text-box-title{
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
-    margin-bottom: 15px;
-    font-size: 25px;
-}
-
-.form-container
-.text-box{
-    max-height: 850px;
-    min-height: 350px;
-    min-width: 750px;
-    max-width: 750px;
-    padding-top: 18px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 15px;
-    font-weight: bold;
-    border: 5px solid #52FF00;
-    margin-bottom: 20px;
-    outline: none;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-.form-container
-.text-box::placeholder{
-    text-align: center;
-    font-size: 20px;
-    color: #52FF00;
-}
-
-.share-button-and-code{
-    display: flex;
-    justify-content: space-between;
-    width: 750px;
-}
-
-.share-button-and-code
-.share-button{
-    padding: 15px 25px;
-    font-size: 17px;
-    font-weight: bold;
-    background: #3ab402;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.4s ease-in-out;
-}
-
-.share-button-and-code
-.share-button:hover{
-    background: #52FF00;   
-}
-
-.share-button-and-code
-.passcode{
-    padding-top: 16px;
-    padding-left: 13px;
-    padding-right: 13px;
-    background-color: rgb(8, 115, 202);
-    color: #fff;
-    font-weight: bold;
-    font-size: 17px;
-    border-radius: 25px;
-    font-family: sans-serif;
-    /* display: none; */
-}
-
-.share-button-and-code
-.shareNcopy{
-    display: flex;
-}
-
-.share-button-and-code
-.copy-btn{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 17px;
-    padding-right: 17px;
-    background-color: var(--primary-color);
-    border: 2px solid #52FF00;
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 25px;
-    font-family: sans-serif;
-    outline: none;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: -webkit-text-stroke-width 0.45s ease-in-out,
+.share-button-and-code .copy-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 17px;
+  padding-right: 17px;
+  background-color: var(--primary-color);
+  border: 2px solid #52ff00;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 25px;
+  font-family: sans-serif;
+  outline: none;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: -webkit-text-stroke-width 0.45s ease-in-out,
     -webkit-text-stroke-color 0.49s ease-in-out;
 }
 
-.share-button-and-code
-.copy-btn:hover{
-    background: #52FF00;
-    color: #fff;
-    -webkit-text-stroke-width: .8px;
-    -webkit-text-stroke-color: rgb(6, 82, 126);
+.share-button-and-code .copy-btn:hover {
+  background: #52ff00;
+  color: #fff;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: rgb(6, 82, 126);
 }

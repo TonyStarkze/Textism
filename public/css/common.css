@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=K2D:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.head {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 66px;
+  border-bottom: 1.5px solid var(--secondary-color);
+  background: var(--head-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  color: var(--secondary-color);
+  z-index: 100;
+}
+
+.logo-container {
+  height: 45px;
+  width: 45px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.site-name-container {
+  margin-left: 13px;
+}
+
+.site-name {
+  font-family: "Itim", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+
+.theme-container {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 0;
+  margin-right: 23px;
+  margin-top: 8px;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: black;
+  --third-color: #727272;
+  --fourth-color: #d9d9d9;
+  --head-color: #fff;
+  --footer-color: #727272;
+}
+
+.dark-theme {
+  --primary-color: #1e1e1e;
+  --secondary-color: #fff;
+  --third-color: #b4b4b4;
+  --fourth-color: #b3b3b3;
+  --head-color: #000000;
+  --footer-color: #000000;
+}
+
+.theme {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+<main>
+  <img src="/images/msg-connected.gif" alt="" />
+
+  {{#if data}}
+    <form action="#" class="form-container" onsubmit="return false;">
+      <p class="text-box-title">Code -
+        {{data.code}}
+      </p>
+      <div class="code-meta">
+
+        <p id="show-expiry"></p>
+      </div>
+
+      <input id="code-expiry-dt" value="{{data.expiry}}" hidden />
+      <textarea class="text-box" name="input-box" readonly>
+        {{data.text}}
+      </textarea>
+      <div class="copy-btn-container">
+        <button onclick="copyText()" class="copy-btn">COPY</button>
+      </div>
+    </form>
+  {{else}}
+    <div class="expiry-container">
+      <h2>Oh No! text associated with this code is no longer available!</h2>
+    </div>
+  {{/if}}
+</main>
+
+<script src="/js/receiver.js"></script>
