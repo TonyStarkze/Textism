@@ -4,6 +4,8 @@
   "description": "TextShare is a powerful online platform designed for seamless text sharing and collaboration. Whether you're a student, professional, or enthusiast, TextShare simplifies the process of sharing text-based content with others, facilitating collaboration and knowledge exchange in real-time.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/main.js",
     "dev": "tsc-watch --onSuccess \" nodemon dist/main.js \""
   },
   "nodemonConfig": {
@@ -33,6 +35,7 @@
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
     "fs-extra": "^11.2.0",
+    "redis": "^4.6.13",
     "uuid": "^9.0.1",
     "zod": "^3.22.4"
   }
