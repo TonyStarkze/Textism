@@ -1,6 +1,18 @@
-import { v4 as uuidv4 } from "uuid";
 import { getExpiryDate } from "./utils";
 import { SetOptions } from "redis";
+
+// Function to generate a 4-character alphanumeric UUIDv4
+function generateShortUUID(): string {
+    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let shortUUID = '';
+
+    for (let i = 0; i < 4; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        shortUUID += characters[randomIndex];
+    }
+
+    return shortUUID;
+}
 
 const DEFAULT_EXPIRY_MINUTES = +process.env.EXPIRY_IN_MINUTES!;
 
@@ -19,7 +31,7 @@ export class Repository {
   constructor(private readonly cache: ICache) {}
 
   async insertText(text: string) {
-    const id = uuidv4();
+    const id = generateShortUUID(); // Generate the 4-digit alphanumeric UUIDv4
 
     const sharedText: SharedText = {
       code: id,
@@ -28,7 +40,7 @@ export class Repository {
     };
 
     await this.cache.set(id, JSON.stringify(sharedText), {
-      EX: DEFAULT_EXPIRY_MINUTES * 60,
+      EX: 3600,
     });
 
     return id;
